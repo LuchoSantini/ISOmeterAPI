@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AXV/dZu/hKeGzM8DlwqO8fAiqP1qxgxCfK8vcrlcMtw=",
+  "Source": "ISOmeterAPI",
+  "BasePath": "_content/ISOmeterAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

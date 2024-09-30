@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\desar\\source\\repos\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj": {}
+    "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\desar\\source\\repos\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj": {
+    "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\desar\\source\\repos\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj",
+        "projectUniqueName": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj",
         "projectName": "ISOmeterAPI",
-        "projectPath": "C:\\Users\\desar\\source\\repos\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj",
+        "projectPath": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj",
         "packagesPath": "C:\\Users\\desar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\desar\\source\\repos\\ISOmeterAPI\\ISOmeterAPI\\obj\\",
+        "outputPath": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\desar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,9 +50,25 @@
               "target": "Package",
               "version": "[6.0.33, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.33, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

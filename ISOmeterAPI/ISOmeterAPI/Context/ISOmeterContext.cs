@@ -16,8 +16,23 @@ namespace ISOmeterAPI.Context
         {
 
         }
+
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().HasData(
+            new User
+            {
+                Id = 1,
+                Name = "user",
+                Surname = "user",
+                Email = "user@user.com",
+                Password = "password",
+                UserType = "Admin",
+                Status = true
+            }
+            );
+
             new DeviceEntityTypeConfiguration().Configure(modelBuilder.Entity<Device>());
             new RoomEntityTypeConfiguration().Configure(modelBuilder.Entity<Room>());
             new UserEntityTypeConfiguration().Configure(modelBuilder.Entity<User>());

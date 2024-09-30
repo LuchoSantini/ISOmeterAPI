@@ -1,4 +1,6 @@
 using ISOmeterAPI.Context;
+using ISOmeterAPI.Services.Implementations;
+using ISOmeterAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace ISOmeterAPI
@@ -10,6 +12,10 @@ namespace ISOmeterAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            #region Dependency Injections
+            builder.Services.AddScoped<IDeviceService, DeviceService>();
+            #endregion
 
             builder.Services.AddDbContext<ISOmeterContext>(dbContextOptions =>
                 dbContextOptions.UseSqlite(builder.Configuration["DB:ConnectionString"])

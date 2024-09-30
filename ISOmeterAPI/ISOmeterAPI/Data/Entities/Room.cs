@@ -13,7 +13,6 @@ namespace ISOmeterAPI.Data.Entities
         public string Observations { get; set; } = string.Empty;
         public int UserId { get; set; }
         [ForeignKey("UserId")]
-        public User User { get; set; }
         public Device Device { get; set; }
         public bool Status { get; set; } // Baja lógica
     }
