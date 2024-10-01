@@ -8,12 +8,12 @@ namespace ISOmeterAPI.Context.Relationships
 {
     public class RoomEntityTypeConfiguration
     {
-        public void Configure(EntityTypeBuilder<Room> builder)
-        {
-            builder
-                .HasOne(r => r.Device)
-                .WithOne(d => d.Room)
-                .HasForeignKey<Device>(d => d.RoomId);
-        }
+        //public void Configure(EntityTypeBuilder<Room> builder)
+        //{
+        //    builder
+        //        .HasOne(r => r.Device)
+        //        .WithOne(d => d.Room)
+        //        .HasForeignKey<Device>(d => d.RoomId);
+        //}
     }
 }

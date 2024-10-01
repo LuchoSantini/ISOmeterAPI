@@ -5,15 +5,16 @@ namespace ISOmeterAPI.Data.Entities
 {
     public class Device
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Required]
+        public int UniversalId { get; set; }
         public string Name { get; set; }
         public string Model { get; set; }
-        public decimal? Temperature { get; set; }
-        public decimal? Humidity { get; set; }
-        public Room Room { get; set; }
-        public int? RoomId { get; set; }
+        public string Description { get; set; } // Podria ser donde está ubicado el device
         public int UserId { get; set; }
-        public ICollection<DeviceHistory> DeviceHistory { get; set; } = new List<DeviceHistory>();
+        public ICollection<Measurement> Measurements { get; set; } = new List<Measurement>();
         public bool Status { get; set; } // Baja lógica
     }
 }

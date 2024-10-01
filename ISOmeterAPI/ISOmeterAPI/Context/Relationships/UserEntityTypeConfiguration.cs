@@ -11,12 +11,12 @@ namespace ISOmeterAPI.Context.Relationships
             builder
                 .HasMany(u => u.Devices)
                 .WithOne()
-            .HasForeignKey(d => d.UserId);
+                .HasForeignKey(d => d.UserId);
 
-            builder
-                .HasMany(u => u.Rooms)
-                .WithOne()
-                .HasForeignKey(r => r.UserId);
+            //builder
+            //    .HasMany(u => u.Rooms)
+            //    .WithOne()
+            //    .HasForeignKey(r => r.UserId);
         }
     }
 }

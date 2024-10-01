@@ -3,6 +3,7 @@ using System;
 using ISOmeterAPI.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ISOmeterAPI.Migrations
 {
     [DbContext(typeof(ISOmeterContext))]
-    partial class ISOmeterContextModelSnapshot : ModelSnapshot
+    [Migration("20241001185502_changes in context")]
+    partial class changesincontext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.33");
@@ -74,6 +76,42 @@ namespace ISOmeterAPI.Migrations
                     b.HasIndex("DeviceId");
 
                     b.ToTable("Measurements");
+                });
+
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Room", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Observations")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UserId1")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("Room");
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.User", b =>
@@ -142,6 +180,23 @@ namespace ISOmeterAPI.Migrations
                     b.Navigation("Device");
                 });
 
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Room", b =>
+                {
+                    b.HasOne("ISOmeterAPI.Data.Entities.Device", "Device")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ISOmeterAPI.Data.Entities.User", null)
+                        .WithMany("Rooms")
+                        .HasForeignKey("UserId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Device");
+                });
+
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Device", b =>
                 {
                     b.Navigation("Measurements");
@@ -150,6 +205,8 @@ namespace ISOmeterAPI.Migrations
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.User", b =>
                 {
                     b.Navigation("Devices");
+
+                    b.Navigation("Rooms");
                 });
 #pragma warning restore 612, 618
         }

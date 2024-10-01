@@ -15,6 +15,7 @@ namespace ISOmeterAPI
 
             #region Dependency Injections
             builder.Services.AddScoped<IDeviceService, DeviceService>();
+            builder.Services.AddScoped<IMeasurementService, MeasurementService>();
             #endregion
 
             builder.Services.AddDbContext<ISOmeterContext>(dbContextOptions =>

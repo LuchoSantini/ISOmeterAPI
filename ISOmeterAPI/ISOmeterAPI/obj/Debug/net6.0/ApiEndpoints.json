@@ -102,5 +102,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
+    "Method": "AddMeasurements",
+    "RelativePath": "api/mesurements",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

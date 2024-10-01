@@ -10,12 +10,10 @@ namespace ISOmeterAPI.Services.Implementations
     public class DeviceService : IDeviceService
     {
         private readonly ISOmeterContext _context;
-
         public DeviceService(ISOmeterContext context)
         {
             _context = context;
         }
-
 
         public async Task<IEnumerable<Device>> GetAllDevices()
         {
@@ -32,19 +30,19 @@ namespace ISOmeterAPI.Services.Implementations
         public bool AddDevice(AddDeviceDTO addDeviceDTO)
         {
             var existingDevice = _context.Devices
-                .FirstOrDefault(p => p.Id == addDeviceDTO.Id);
+                .FirstOrDefault(p => p.UniversalId == addDeviceDTO.UniversalId);
 
             var existingUser = _context.Users
                 .FirstOrDefault(u => u.Id == addDeviceDTO.UserId);
 
-            if (existingDevice == null && addDeviceDTO.Id != 0 && existingUser != null)
+            if (existingDevice == null && addDeviceDTO.UniversalId != 0 && existingUser != null)
             {
                 Device newDevice = new Device
                 {
-                    Id = addDeviceDTO.Id,
+                    UniversalId = addDeviceDTO.UniversalId,
                     Name = addDeviceDTO.Name,
                     Model = addDeviceDTO.Model,
-                    RoomId = null,
+                    Description = addDeviceDTO.Description,
                     UserId = addDeviceDTO.UserId,
                     Status = true
                 };
@@ -63,9 +61,12 @@ namespace ISOmeterAPI.Services.Implementations
 
             if (deviceToEdit != null)
             {
+                deviceToEdit.UniversalId = editDeviceDTO.UniversalId;
                 deviceToEdit.Name = editDeviceDTO.Name;
                 deviceToEdit.Model = editDeviceDTO.Model;
-                deviceToEdit.RoomId = editDeviceDTO.RoomId; // Por si el dispositivo cambió de habitación
+                deviceToEdit.Description = editDeviceDTO.Description;
+
+                //deviceToEdit.RoomId = editDeviceDTO.RoomId; // Por si el dispositivo cambió de habitación
                 //deviceToEdit.Status = editDeviceDTO.Status; // Baja lógica
 
                 _context.Devices.Update(deviceToEdit);
