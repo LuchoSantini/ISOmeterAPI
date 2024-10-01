@@ -14,7 +14,6 @@ namespace ISOmeterAPI.Services.Implementations
             _context = context;
         }
 
-
         public bool AddMeasurement(int deviceId)
         {
             var existingDevice = _context.Devices

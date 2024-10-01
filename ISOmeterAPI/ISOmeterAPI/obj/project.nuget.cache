@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DYC4mjRvknA=",
+  "dgSpecHash": "BtdDuZFkTTA=",
   "success": true,
   "projectFilePath": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\desar\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\desar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\desar\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.33\\microsoft.data.sqlite.core.6.0.33.nupkg.sha512",
     "C:\\Users\\desar\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.33\\microsoft.entityframeworkcore.6.0.33.nupkg.sha512",

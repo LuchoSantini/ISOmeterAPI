@@ -71,3 +71,4 @@ C:\Users\desar\OneDrive\Escritorio\Repo ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\ISOm
 C:\Users\desar\OneDrive\Escritorio\Repo ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\bin\Debug\net6.0\runtimes\osx-x64\native\libsqlite3.dylib
 C:\Users\desar\OneDrive\Escritorio\Repo ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\bin\Debug\net6.0\runtimes\win7-x64\native\sqlite3.dll
 C:\Users\desar\OneDrive\Escritorio\Repo ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\bin\Debug\net6.0\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\desar\OneDrive\Escritorio\Repo ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\ISOmeterAPI\bin\Debug\net6.0\BCrypt.Net-Next.dll

@@ -15,7 +15,7 @@ namespace ISOmeterAPI.Controllers
             _measurementService = measurementService;
         }
 
-        [HttpPost("mesurements")]
+        [HttpPost("measurements")]
         public IActionResult AddMeasurements(int deviceId)
         {
             try

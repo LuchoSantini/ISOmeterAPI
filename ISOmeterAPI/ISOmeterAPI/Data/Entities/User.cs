@@ -12,7 +12,7 @@ namespace ISOmeterAPI.Data.Entities
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string UserType { get; set; }
+        public string UserType { get; set; } = "Manager";
         public bool Status { get; set; } // Baja lógica
         public ICollection<Device> Devices { get; set; } = new List<Device>();
         //public ICollection<Room> Rooms { get; set; } = new List<Room>();
