@@ -1,4 +1,5 @@
-﻿using ISOmeterAPI.Data.Models.DeviceDTOs;
+﻿using ISOmeterAPI.Data.Entities;
+using ISOmeterAPI.Data.Models.DeviceDTOs;
 using ISOmeterAPI.Services.Implementations;
 using ISOmeterAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +16,12 @@ namespace ISOmeterAPI.Controllers
             _measurementService = measurementService;
         }
 
-        [HttpPost("measurements")]
-        public IActionResult AddMeasurements(int deviceId)
+        [HttpPost("measurements/{universalId}")]
+        public IActionResult AddMeasurements(int universalId)
         {
             try
             {
-                if (_measurementService.AddMeasurement(deviceId))
+                if (_measurementService.AddMeasurement(universalId))
                 {
                     return Ok("Medicion agregada");
                 }
@@ -28,6 +29,34 @@ namespace ISOmeterAPI.Controllers
             }
             catch (ArgumentException ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("measurements")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetAllDevices()
+        {
+            try
+            {
+                return Ok(await _measurementService.GetAllMeasurements());
+            }
+            catch (ArgumentException ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("measurement/{deviceId}")]
+        public async Task<ActionResult<Device>> GetMeasurementById(int deviceId)
+        {
+            try
+            {
+                return Ok(await _measurementService.GetMeasurementById(deviceId));
+            }
+            catch (ArgumentException ex)
+            {
+
                 return BadRequest(ex.Message);
             }
         }

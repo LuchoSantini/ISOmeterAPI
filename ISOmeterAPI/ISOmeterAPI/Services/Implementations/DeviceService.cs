@@ -17,12 +17,15 @@ namespace ISOmeterAPI.Services.Implementations
 
         public async Task<IEnumerable<Device>> GetAllDevices()
         {
-            return await _context.Devices.ToListAsync();
+            return await _context.Devices
+                .Where(x => x.Status == true)
+                .ToListAsync();
         }
 
         public async Task<Device> GetDeviceById(int id)
         {
             var deviceToReturn = await _context.Devices
+                .Where(x => x.Status != true)
                 .FirstOrDefaultAsync(d => d.Id.Equals(id));
 
             return deviceToReturn;
@@ -32,10 +35,10 @@ namespace ISOmeterAPI.Services.Implementations
             var existingDevice = _context.Devices
                 .FirstOrDefault(p => p.UniversalId == addDeviceDTO.UniversalId);
 
-            var existingUser = _context.Users
-                .FirstOrDefault(u => u.Id == addDeviceDTO.UserId);
+            //var existingUser = _context.Users
+            //    .FirstOrDefault(u => u.Id == addDeviceDTO.UserId);
 
-            if (existingDevice == null && addDeviceDTO.UniversalId != 0 && existingUser != null)
+            if (existingDevice == null && addDeviceDTO.UniversalId != 0)
             {
                 Device newDevice = new Device
                 {
@@ -43,7 +46,7 @@ namespace ISOmeterAPI.Services.Implementations
                     Name = addDeviceDTO.Name,
                     Model = addDeviceDTO.Model,
                     Description = addDeviceDTO.Description,
-                    UserId = addDeviceDTO.UserId,
+                    UserId = 2, // Solo hay un usuario, si se agrega autenticación tomarlo de las claims
                     Status = true
                 };
 
@@ -57,7 +60,7 @@ namespace ISOmeterAPI.Services.Implementations
         public bool EditDevice(int id, EditDeviceDTO editDeviceDTO)
         {
             var deviceToEdit = _context.Devices
-                .FirstOrDefault(d => d.Id == id);
+                .FirstOrDefault(d => d.UniversalId == id);
 
             if (deviceToEdit != null)
             {
@@ -76,9 +79,9 @@ namespace ISOmeterAPI.Services.Implementations
             return false;
         }
 
-        public void ChangeDeviceStatus(int id, StatusDeviceDTO statusDeviceDTO)
+        public void ChangeDeviceStatus(int universalId, StatusDeviceDTO statusDeviceDTO)
         { 
-            var deviceToChangeStatus = _context.Devices.FirstOrDefault(d => d.Id == id);
+            var deviceToChangeStatus = _context.Devices.FirstOrDefault(d => d.UniversalId == universalId);
 
             if (deviceToChangeStatus != null)
             {

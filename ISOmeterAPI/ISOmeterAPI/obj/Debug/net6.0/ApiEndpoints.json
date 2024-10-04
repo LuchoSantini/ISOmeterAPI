@@ -44,13 +44,13 @@
   {
     "ContainingType": "ISOmeterAPI.Controllers.DeviceController",
     "Method": "EditDevice",
-    "RelativePath": "api/device/edit/{id}",
+    "RelativePath": "api/device/edit/{universalId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "universalId",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -65,13 +65,13 @@
   {
     "ContainingType": "ISOmeterAPI.Controllers.DeviceController",
     "Method": "ChangeDeviceStatus",
-    "RelativePath": "api/device/status/{id}",
+    "RelativePath": "api/device/status/{universalId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "universalId",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -121,16 +121,62 @@
   },
   {
     "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
-    "Method": "AddMeasurements",
-    "RelativePath": "api/measurements",
-    "HttpMethod": "POST",
+    "Method": "GetMeasurementById",
+    "RelativePath": "api/measurement/{deviceId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "deviceId",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ISOmeterAPI.Data.Entities.Device",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
+    "Method": "GetAllDevices",
+    "RelativePath": "api/measurements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ISOmeterAPI.Data.Entities.Device, ISOmeterAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
+    "Method": "AddMeasurements",
+    "RelativePath": "api/measurements/{universalId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "universalId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

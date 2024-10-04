@@ -61,12 +61,12 @@ namespace ISOmeterAPI.Controllers
             }
         }
 
-        [HttpPut("device/edit/{id}")]
-        public IActionResult EditDevice(int id, EditDeviceDTO editDeviceDTO)
+        [HttpPut("device/edit/{universalId}")]
+        public IActionResult EditDevice(int universalId, EditDeviceDTO editDeviceDTO)
         {
             try
             {
-                if (_deviceService.EditDevice(id, editDeviceDTO))
+                if (_deviceService.EditDevice(universalId, editDeviceDTO))
                 {
                     return Ok("Dispositivo editado");
                 }
@@ -78,10 +78,10 @@ namespace ISOmeterAPI.Controllers
             }
         }
 
-        [HttpPut("device/status/{id}")]
-        public IActionResult ChangeDeviceStatus(int id, StatusDeviceDTO statusDeviceDTO)
+        [HttpPut("device/status/{universalId}")]
+        public IActionResult ChangeDeviceStatus(int universalId, StatusDeviceDTO statusDeviceDTO)
         {
-            _deviceService.ChangeDeviceStatus(id, statusDeviceDTO);
+            _deviceService.ChangeDeviceStatus(universalId, statusDeviceDTO);
 
             return Ok($"Se cambió el estado a {statusDeviceDTO.Status}");
         }
