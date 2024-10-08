@@ -2,6 +2,7 @@ using ISOmeterAPI.Context;
 using ISOmeterAPI.Services.Implementations;
 using ISOmeterAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace ISOmeterAPI
 {
@@ -12,6 +13,14 @@ namespace ISOmeterAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddSingleton<IExportDBService>(provider =>
+            {
+                // Obtiene la cadena de conexión desde la configuración
+                string connectionString = builder.Configuration["DB:ConnectionString"];
+                // Crea una instancia de ExportDBService pasando la cadena de conexión
+                return new ExportDBService(connectionString);
+            });
 
             #region Dependency Injections
             builder.Services.AddScoped<IDeviceService, DeviceService>();

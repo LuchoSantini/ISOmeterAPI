@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "ISOmeterAPI.Controllers.ExportDBController",
+    "Method": "ExportDatabaseToExcel",
+    "RelativePath": "api/database",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pathDTO",
+        "Type": "ISOmeterAPI.Data.Models.ExportDBDTOs.PathDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.ExportDBController",
+    "Method": "GetTableNames",
+    "RelativePath": "api/database",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ISOmeterAPI.Controllers.DeviceController",
     "Method": "AddDevice",
     "RelativePath": "api/device",
