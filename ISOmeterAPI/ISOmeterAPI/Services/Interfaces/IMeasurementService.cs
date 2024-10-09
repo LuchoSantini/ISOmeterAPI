@@ -5,9 +5,9 @@ namespace ISOmeterAPI.Services.Interfaces
 {
     public interface IMeasurementService
     {
-        public bool AddMeasurement(int universalId);
+        public Task<bool> AddMeasurementAsync(int essayId);
         public Task<IEnumerable<GetMeasurementsDTO>> GetAllMeasurements();
-        public Task<IEnumerable<GetMeasurementsDTO>> GetMeasurementById(int deviceId);
+        //public Task<IEnumerable<GetMeasurementsDTO>> GetMeasurementById(int deviceId);
 
     }
 }

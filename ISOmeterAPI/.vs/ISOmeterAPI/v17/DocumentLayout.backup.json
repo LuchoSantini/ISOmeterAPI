@@ -3,8 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\implementations\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\implementations\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\devicedtos\\adddevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\devicedtos\\adddevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\devicedtos\\editdevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\devicedtos\\editdevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\implementations\\essayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\implementations\\essayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\implementations\\measurementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\implementations\\measurementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\implementations\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\implementations\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\controllers\\essaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\controllers\\essaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\interfaces\\iessayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\interfaces\\iessayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\essaydtos\\getessaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\essaydtos\\getessaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\measurementdtos\\getmeasurementbyiddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\measurementdtos\\getmeasurementbyiddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\measurementdtos\\getmeasurementsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\measurementdtos\\getmeasurementsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\models\\roomdtos\\addroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\models\\roomdtos\\addroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\controllers\\measurementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\controllers\\measurementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\entities\\essay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\entities\\essay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\data\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\data\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|c:\\users\\desar\\onedrive\\escritorio\\repo isometerapi\\isometerapi\\isometerapi\\isometerapi\\services\\implementations\\exportdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50458E02-32B8-4849-8DB7-703F45F7C7E2}|ISOmeterAPI\\ISOmeterAPI.csproj|solutionrelative:isometerapi\\services\\implementations\\exportdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +102,245 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddDeviceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\DeviceDTOs\\AddDeviceDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\DeviceDTOs\\AddDeviceDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\DeviceDTOs\\AddDeviceDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\DeviceDTOs\\AddDeviceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:06:44.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EssayService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\EssayService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Implementations\\EssayService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\EssayService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Implementations\\EssayService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAtwCEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:40:59.642Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\DeviceService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Implementations\\DeviceService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\DeviceService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Implementations\\DeviceService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:36:29.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeviceController.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\DeviceController.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Controllers\\DeviceController.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\DeviceController.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Controllers\\DeviceController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:35:09.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditDeviceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\DeviceDTOs\\EditDeviceDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\DeviceDTOs\\EditDeviceDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\DeviceDTOs\\EditDeviceDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\DeviceDTOs\\EditDeviceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T12:17:45.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IDeviceService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Interfaces\\IDeviceService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IDeviceService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Interfaces\\IDeviceService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T13:42:18.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MeasurementService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\MeasurementService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Implementations\\MeasurementService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\MeasurementService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Implementations\\MeasurementService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBgAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:52:41.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Controllers\\RoomController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwCkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:10:29.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\RoomService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Implementations\\RoomService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\RoomService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Implementations\\RoomService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAWwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:11:24.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EssayController.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\EssayController.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Controllers\\EssayController.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\EssayController.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Controllers\\EssayController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswCsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:46:11.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Interfaces\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Interfaces\\IRoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:11:27.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetEssayDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\EssayDTOs\\GetEssayDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\EssayDTOs\\GetEssayDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\EssayDTOs\\GetEssayDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\EssayDTOs\\GetEssayDTO.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:11:51.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetMeasurementByIdDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementByIdDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementByIdDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementByIdDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementByIdDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:16:51.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IEssayService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IEssayService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Interfaces\\IEssayService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Interfaces\\IEssayService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Interfaces\\IEssayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:46:00.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetMeasurementsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementsDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementsDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementsDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\MeasurementDTOs\\GetMeasurementsDTO.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:55:10.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MeasurementController.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\MeasurementController.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Controllers\\MeasurementController.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Controllers\\MeasurementController.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Controllers\\MeasurementController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwEAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:08:39.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddRoomDTO.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\RoomDTOs\\AddRoomDTO.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Models\\RoomDTOs\\AddRoomDTO.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Models\\RoomDTOs\\AddRoomDTO.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Models\\RoomDTOs\\AddRoomDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:53:22.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Essay.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Entities\\Essay.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Entities\\Essay.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Entities\\Essay.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Data\\Entities\\Essay.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:53:56.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "ISOmeterAPI\\Data\\Entities\\Room.cs",
               "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Data\\Entities\\Room.cs",
               "RelativeToolTip": "ISOmeterAPI\\Data\\Entities\\Room.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T23:04:58.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T09:54:19.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ExportDBService.cs",
+              "DocumentMoniker": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\ExportDBService.cs",
+              "RelativeDocumentMoniker": "ISOmeterAPI\\Services\\Implementations\\ExportDBService.cs",
+              "ToolTip": "C:\\Users\\desar\\OneDrive\\Escritorio\\Repo ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\ISOmeterAPI\\Services\\Implementations\\ExportDBService.cs",
+              "RelativeToolTip": "ISOmeterAPI\\Services\\Implementations\\ExportDBService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T09:53:00.979Z"
             }
           ]
         }

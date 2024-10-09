@@ -26,6 +26,8 @@ namespace ISOmeterAPI
             builder.Services.AddScoped<IDeviceService, DeviceService>();
             builder.Services.AddScoped<IMeasurementService, MeasurementService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IEssayService, EssayService>();
+            builder.Services.AddScoped<IRoomService, RoomService>();
             #endregion
 
             builder.Services.AddDbContext<ISOmeterContext>(dbContextOptions =>

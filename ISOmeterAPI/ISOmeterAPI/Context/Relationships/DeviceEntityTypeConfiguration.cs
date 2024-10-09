@@ -9,9 +9,9 @@ namespace ISOmeterAPI.Context.Relationships
         public void Configure(EntityTypeBuilder<Device> builder)
         {
             builder
-                .HasMany(d => d.Measurements)
-                .WithOne(dh => dh.Device)
-                .HasForeignKey(dh => dh.DeviceId);
+                .HasMany(d => d.Essays)
+                .WithOne(e => e.Device)
+                .HasForeignKey(e => e.DeviceId);
         }
     }
 }

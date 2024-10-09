@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ISOmeterAPI.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class UpdatedContext : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,7 +35,6 @@ namespace ISOmeterAPI.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Observations = table.Column<string>(type: "TEXT", nullable: false),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
                     Status = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
@@ -56,12 +55,11 @@ namespace ISOmeterAPI.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    UniversalId = table.Column<int>(type: "INTEGER", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Model = table.Column<string>(type: "TEXT", nullable: false),
-                    Temperature = table.Column<decimal>(type: "TEXT", nullable: true),
-                    Humidity = table.Column<decimal>(type: "TEXT", nullable: true),
-                    RoomId = table.Column<int>(type: "INTEGER", nullable: true),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    RoomId = table.Column<int>(type: "INTEGER", nullable: false),
                     Status = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -71,32 +69,56 @@ namespace ISOmeterAPI.Migrations
                         name: "FK_Devices_Rooms_RoomId",
                         column: x => x.RoomId,
                         principalTable: "Rooms",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Devices_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "DeviceHistory",
+                name: "Essays",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    InitDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     DeviceId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Status = table.Column<bool>(type: "INTEGER", nullable: false),
+                    RoomId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Essays", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Essays_Devices_DeviceId",
+                        column: x => x.DeviceId,
+                        principalTable: "Devices",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Essays_Rooms_RoomId",
+                        column: x => x.RoomId,
+                        principalTable: "Rooms",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Measurements",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Temperature = table.Column<decimal>(type: "TEXT", nullable: true),
+                    Humidity = table.Column<decimal>(type: "TEXT", nullable: true),
+                    EssayId = table.Column<int>(type: "INTEGER", nullable: false),
                     ChangeDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DeviceHistory", x => x.Id);
+                    table.PrimaryKey("PK_Measurements", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DeviceHistory_Devices_DeviceId",
-                        column: x => x.DeviceId,
-                        principalTable: "Devices",
+                        name: "FK_Measurements_Essays_EssayId",
+                        column: x => x.EssayId,
+                        principalTable: "Essays",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -106,21 +128,30 @@ namespace ISOmeterAPI.Migrations
                 columns: new[] { "Id", "Email", "Name", "Password", "Status", "Surname", "UserType" },
                 values: new object[] { 1, "user@user.com", "user", "password", true, "user", "Admin" });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_DeviceHistory_DeviceId",
-                table: "DeviceHistory",
-                column: "DeviceId");
+            migrationBuilder.InsertData(
+                table: "Rooms",
+                columns: new[] { "Id", "Description", "Name", "Status", "UserId" },
+                values: new object[] { 1, "Room1", "Room1", true, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Devices_RoomId",
                 table: "Devices",
-                column: "RoomId",
-                unique: true);
+                column: "RoomId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Devices_UserId",
-                table: "Devices",
-                column: "UserId");
+                name: "IX_Essays_DeviceId",
+                table: "Essays",
+                column: "DeviceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Essays_RoomId",
+                table: "Essays",
+                column: "RoomId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Measurements_EssayId",
+                table: "Measurements",
+                column: "EssayId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Rooms_UserId",
@@ -131,7 +162,10 @@ namespace ISOmeterAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DeviceHistory");
+                name: "Measurements");
+
+            migrationBuilder.DropTable(
+                name: "Essays");
 
             migrationBuilder.DropTable(
                 name: "Devices");

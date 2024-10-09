@@ -9,6 +9,6 @@ namespace ISOmeterAPI.Services.Interfaces
         public Task<Device> GetDeviceById(int id);
         public bool AddDevice(AddDeviceDTO addDeviceDTO);
         public bool EditDevice(int universalId, EditDeviceDTO editDeviceDTO);
-        public void ChangeDeviceStatus(int id, StatusDeviceDTO statusDeviceDTO);
+        public bool ChangeDeviceStatus(int id);
     }
 }

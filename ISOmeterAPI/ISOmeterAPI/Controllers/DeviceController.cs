@@ -78,12 +78,24 @@ namespace ISOmeterAPI.Controllers
             }
         }
 
-        [HttpPut("device/status/{universalId}")]
-        public IActionResult ChangeDeviceStatus(int universalId, StatusDeviceDTO statusDeviceDTO)
+        [HttpGet("device/status/{universalId}")]
+        public IActionResult ChangeDeviceStatus(int universalId)
         {
-            _deviceService.ChangeDeviceStatus(universalId, statusDeviceDTO);
+            try
+            {
+                var deviceStatus = _deviceService.ChangeDeviceStatus(universalId);
 
-            return Ok($"Se cambió el estado a {statusDeviceDTO.Status}");
+                if (deviceStatus != null)
+                {
+                    return Ok(new { Status = deviceStatus });
+                }
+                return BadRequest("Error al obtener el estado del dispositivo.");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
+
     }
 }

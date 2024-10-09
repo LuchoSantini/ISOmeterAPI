@@ -16,16 +16,18 @@ namespace ISOmeterAPI.Controllers
             _measurementService = measurementService;
         }
 
-        [HttpPost("measurements/{universalId}")]
-        public IActionResult AddMeasurements(int universalId)
+        [HttpPost("measurements/{essayId}")]
+        public async Task<IActionResult> AddMeasurements(int essayId)
         {
             try
             {
-                if (_measurementService.AddMeasurement(universalId))
+                var result = await _measurementService.AddMeasurementAsync(essayId);
+
+                if (result)
                 {
-                    return Ok("Medicion agregada");
+                    return Ok("Medición agregada");
                 }
-                return BadRequest("Error al agregar la Medicion.");
+                return BadRequest("Error al agregar la medición.");
             }
             catch (ArgumentException ex)
             {
@@ -33,8 +35,9 @@ namespace ISOmeterAPI.Controllers
             }
         }
 
+
         [HttpGet("measurements")]
-        public async Task<ActionResult<IEnumerable<Device>>> GetAllDevices()
+        public async Task<ActionResult<IEnumerable<Device>>> GetAllMeasurements()
         {
             try
             {
@@ -47,18 +50,18 @@ namespace ISOmeterAPI.Controllers
             }
         }
 
-        [HttpGet("measurement/{deviceId}")]
-        public async Task<ActionResult<Device>> GetMeasurementById(int deviceId)
-        {
-            try
-            {
-                return Ok(await _measurementService.GetMeasurementById(deviceId));
-            }
-            catch (ArgumentException ex)
-            {
+        //[HttpGet("measurement/{deviceId}")]
+        //public async Task<ActionResult<Device>> GetMeasurementById(int deviceId)
+        //{
+        //    try
+        //    {
+        //        return Ok(await _measurementService.GetMeasurementById(deviceId));
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
 
-                return BadRequest(ex.Message);
-            }
-        }
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
     }
 }

@@ -9,5 +9,6 @@ namespace ISOmeterAPI.Data.Models.DeviceDTOs
         public string Name { get; set; }
         public string Model { get; set; }
         public string Description { get; set; }
+        public int RoomId { get; set; }
     }
 }

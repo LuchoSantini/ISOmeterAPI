@@ -102,18 +102,13 @@
     "ContainingType": "ISOmeterAPI.Controllers.DeviceController",
     "Method": "ChangeDeviceStatus",
     "RelativePath": "api/device/status/{universalId}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "universalId",
         "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "statusDeviceDTO",
-        "Type": "ISOmeterAPI.Data.Models.DeviceDTOs.StatusDeviceDTO",
         "IsRequired": true
       }
     ],
@@ -140,6 +135,53 @@
     ]
   },
   {
+    "ContainingType": "ISOmeterAPI.Controllers.EssayController",
+    "Method": "GetEssayById",
+    "RelativePath": "api/essay/{deviceId}/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ISOmeterAPI.Data.Entities.Essay",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.EssayController",
+    "Method": "AddEssayAsync",
+    "RelativePath": "api/essay/{universalId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "universalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ISOmeterAPI.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/login",
@@ -157,33 +199,7 @@
   },
   {
     "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
-    "Method": "GetMeasurementById",
-    "RelativePath": "api/measurement/{deviceId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "deviceId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ISOmeterAPI.Data.Entities.Device",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
-    "Method": "GetAllDevices",
+    "Method": "GetAllMeasurements",
     "RelativePath": "api/measurements",
     "HttpMethod": "GET",
     "IsController": true,
@@ -204,13 +220,13 @@
   {
     "ContainingType": "ISOmeterAPI.Controllers.MeasurementController",
     "Method": "AddMeasurements",
-    "RelativePath": "api/measurements/{universalId}",
+    "RelativePath": "api/measurements/{essayId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "universalId",
+        "Name": "essayId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -232,6 +248,42 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.RoomController",
+    "Method": "AddRoom",
+    "RelativePath": "api/room",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addRoomDTO",
+        "Type": "ISOmeterAPI.Data.Models.RoomDTO.AddRoomDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ISOmeterAPI.Controllers.RoomController",
+    "Method": "GetAllRooms",
+    "RelativePath": "api/rooms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ISOmeterAPI.Data.Entities.Room, ISOmeterAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "ISOmeterAPI.Controllers.UserController",

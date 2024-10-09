@@ -10,8 +10,8 @@ namespace ISOmeterAPI.Data.Entities
         public int Id { get; set; }
         public decimal? Temperature { get; set; }
         public decimal? Humidity { get; set; }
-        public int DeviceId { get; set; }
-        public Device Device { get; set; }
+        [ForeignKey("EssayId")]
+        public int EssayId { get; set; }
         public DateTime ChangeDate { get; set; }
     }
 }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ISOmeterAPI.Migrations
 {
     [DbContext(typeof(ISOmeterContext))]
-    [Migration("20241001185330_change in entities")]
-    partial class changeinentities
+    [Migration("20241008015518_UpdatedContext")]
+    partial class UpdatedContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,20 +37,47 @@ namespace ISOmeterAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("RoomId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("Status")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UniversalId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UserId")
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Devices");
+                });
+
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Essay", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DeviceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("InitDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RoomId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("DeviceId");
 
-                    b.ToTable("Devices");
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Essays");
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Measurement", b =>
@@ -62,7 +89,7 @@ namespace ISOmeterAPI.Migrations
                     b.Property<DateTime>("ChangeDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("DeviceId")
+                    b.Property<int>("EssayId")
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal?>("Humidity")
@@ -73,9 +100,9 @@ namespace ISOmeterAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DeviceId");
+                    b.HasIndex("EssayId");
 
-                    b.ToTable("Measurement");
+                    b.ToTable("Measurements");
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Room", b =>
@@ -92,26 +119,27 @@ namespace ISOmeterAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Observations")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("Status")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.HasIndex("UserId1");
-
                     b.ToTable("Rooms");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Room1",
+                            Name = "Room1",
+                            Status = true,
+                            UserId = 1
+                        });
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.User", b =>
@@ -162,48 +190,71 @@ namespace ISOmeterAPI.Migrations
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Device", b =>
                 {
-                    b.HasOne("ISOmeterAPI.Data.Entities.User", null)
+                    b.HasOne("ISOmeterAPI.Data.Entities.Room", "Room")
                         .WithMany("Devices")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Room");
                 });
 
-            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Measurement", b =>
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Essay", b =>
                 {
                     b.HasOne("ISOmeterAPI.Data.Entities.Device", "Device")
-                        .WithMany("Measurements")
+                        .WithMany("Essays")
                         .HasForeignKey("DeviceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ISOmeterAPI.Data.Entities.Room", "Room")
+                        .WithMany("Essays")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Device");
+
+                    b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Measurement", b =>
+                {
+                    b.HasOne("ISOmeterAPI.Data.Entities.Essay", null)
+                        .WithMany("Measurements")
+                        .HasForeignKey("EssayId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Room", b =>
                 {
-                    b.HasOne("ISOmeterAPI.Data.Entities.Device", "Device")
-                        .WithMany()
+                    b.HasOne("ISOmeterAPI.Data.Entities.User", null)
+                        .WithMany("Rooms")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("ISOmeterAPI.Data.Entities.User", null)
-                        .WithMany("Rooms")
-                        .HasForeignKey("UserId1");
-
-                    b.Navigation("Device");
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.Device", b =>
                 {
+                    b.Navigation("Essays");
+                });
+
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Essay", b =>
+                {
                     b.Navigation("Measurements");
+                });
+
+            modelBuilder.Entity("ISOmeterAPI.Data.Entities.Room", b =>
+                {
+                    b.Navigation("Devices");
+
+                    b.Navigation("Essays");
                 });
 
             modelBuilder.Entity("ISOmeterAPI.Data.Entities.User", b =>
                 {
-                    b.Navigation("Devices");
-
                     b.Navigation("Rooms");
                 });
 #pragma warning restore 612, 618
