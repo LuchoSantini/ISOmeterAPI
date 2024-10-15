@@ -28,7 +28,7 @@ namespace ISOmeterAPI.Services.Implementations
             {
                 Essay newEssay = new Essay
                 {
-                    InitDate = DateTime.Now,
+                    InitDate = DateTime.Now.ToString("yyyy/MM/dd HH:mm"), // Formato de fecha
                     DeviceId = existingDevice.Id,
                     RoomId = existingDevice.RoomId,
                 };
@@ -38,13 +38,14 @@ namespace ISOmeterAPI.Services.Implementations
                 await _context.SaveChangesAsync();
                 await _measurementService.AddMeasurementAsync(newEssay.Id);
 
-                newEssay.EndDate = DateTime.Now;
+                newEssay.EndDate = DateTime.Now.ToString("yyyy/MM/dd HH:mm"); // Formato de fecha
                 await _context.SaveChangesAsync();
 
                 return true;
             }
             return false;
         }
+
 
         public async Task<IEnumerable<GetEssayDTO>> GetEssayById(int deviceId, int roomId)
         {

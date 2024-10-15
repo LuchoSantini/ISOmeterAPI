@@ -39,8 +39,8 @@ namespace ISOmeterAPI.Context
             new Room
             {
                 Id = 1,
-                Name = "Room1",
-                Description = "Room1",
+                Name = "Habitación 1",
+                Description = "Habitación 1",
                 UserId = 1,
                 Status = true,
             }

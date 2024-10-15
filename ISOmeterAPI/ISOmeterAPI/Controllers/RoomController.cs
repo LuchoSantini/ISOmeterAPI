@@ -3,6 +3,7 @@ using ISOmeterAPI.Data.Models.DeviceDTOs;
 using ISOmeterAPI.Data.Models.RoomDTO;
 using ISOmeterAPI.Services.Implementations;
 using ISOmeterAPI.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ISOmeterAPI.Controllers
@@ -17,6 +18,7 @@ namespace ISOmeterAPI.Controllers
             _roomService = roomService;
         }
 
+        [Authorize]
         [HttpPost("room")]
         public IActionResult AddRoom([FromBody] AddRoomDTO addRoomDTO)
         {
@@ -33,7 +35,7 @@ namespace ISOmeterAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        [Authorize]
         [HttpGet("rooms")]
         public async Task<ActionResult<IEnumerable<Room>>> GetAllRooms()
         {

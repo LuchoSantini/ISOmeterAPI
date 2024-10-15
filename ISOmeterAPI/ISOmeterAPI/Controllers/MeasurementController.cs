@@ -16,24 +16,24 @@ namespace ISOmeterAPI.Controllers
             _measurementService = measurementService;
         }
 
-        [HttpPost("measurements/{essayId}")]
-        public async Task<IActionResult> AddMeasurements(int essayId)
-        {
-            try
-            {
-                var result = await _measurementService.AddMeasurementAsync(essayId);
+        //[HttpPost("measurements/{essayId}")]
+        //public async Task<IActionResult> AddMeasurements(int essayId)
+        //{
+        //    try
+        //    {
+        //        var result = await _measurementService.AddMeasurementAsync(essayId);
 
-                if (result)
-                {
-                    return Ok("Medición agregada");
-                }
-                return BadRequest("Error al agregar la medición.");
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //        if (result)
+        //        {
+        //            return Ok("Medición agregada");
+        //        }
+        //        return BadRequest("Error al agregar la medición.");
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
 
         [HttpGet("measurements")]

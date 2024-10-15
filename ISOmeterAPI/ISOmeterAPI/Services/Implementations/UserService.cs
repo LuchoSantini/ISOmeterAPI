@@ -2,14 +2,17 @@
 using ISOmeterAPI.Data.Entities;
 using ISOmeterAPI.Data.Models.UserDTOs;
 using ISOmeterAPI.Services.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace ISOmeterAPI.Services.Implementations
 {
     public class UserService : IUserService
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ISOmeterContext _context;
-        public UserService(ISOmeterContext context)
+        public UserService(IHttpContextAccessor httpContextAccessor, ISOmeterContext context)
         {
+            _httpContextAccessor = httpContextAccessor;
             _context = context;
         }
 
@@ -102,20 +105,47 @@ namespace ISOmeterAPI.Services.Implementations
             return false;
         }
 
-        public GetUsersDTO GetUserByEmail(string email)
+        //public GetUsersDTO GetUserByEmail(string email)
+        //{
+        //    var user = _context.Users.SingleOrDefault(e => e.Email == email);
+
+        //    if (user == null) return null;
+
+        //    return new GetUsersDTO
+        //    {
+        //        Id = user.Id,
+        //        Name = user.Name,
+        //        Surname = user.Surname,
+        //        Email = user.Email,
+        //        UserType = user.UserType,
+        //    };
+        //}
+
+        public User GetUserByEmail(string email)
         {
-            var user = _context.Users.SingleOrDefault(e => e.Email == email);
+            return _context.Users.SingleOrDefault(e => e.Email == email);
+        }
 
-            if (user == null) return null;
+        public int GetUserIdFromToken()
+        {
+            var httpContext = _httpContextAccessor.HttpContext;
+            var authorizationHeader = httpContext.Request.Headers["Authorization"].FirstOrDefault();
 
-            return new GetUsersDTO
+            if (authorizationHeader != null && authorizationHeader.StartsWith("Bearer "))
             {
-                Id = user.Id,
-                Name = user.Name,
-                Surname = user.Surname,
-                Email = user.Email,
-                UserType = user.UserType,
-            };
+                var token = authorizationHeader.Substring("Bearer ".Length).Trim();
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var jwtToken = tokenHandler.ReadJwtToken(token);
+
+                if (jwtToken != null && jwtToken.Claims.FirstOrDefault(c => c.Type == "sub") != null)
+                {
+                    var userId = int.Parse(jwtToken.Claims.FirstOrDefault(c => c.Type == "sub").Value);
+                    return userId;
+                }
+            }
+
+            throw new Exception("Error retrieving userId from token.");
         }
     }
 }

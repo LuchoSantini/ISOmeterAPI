@@ -61,6 +61,7 @@ namespace ISOmeterAPI.Services.Implementations
                 .Select(m => new GetMeasurementsDTO
                 {
                     Id = m.Id,
+                    EssayId = m.EssayId, 
                     Temperature = m.Temperature,
                     Humidity = m.Humidity,
                     ChangeDate = m.ChangeDate,                    

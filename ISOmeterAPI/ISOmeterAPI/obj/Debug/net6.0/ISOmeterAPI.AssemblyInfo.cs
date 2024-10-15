@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ISOmeterAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5091602bd8360fdc43bce2bd92f23275bc778a8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+528de55e047c4d54bc390e5fc35a7c8aeb12db47")]
 [assembly: System.Reflection.AssemblyProductAttribute("ISOmeterAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ISOmeterAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

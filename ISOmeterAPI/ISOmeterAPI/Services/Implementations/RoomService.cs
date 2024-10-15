@@ -9,19 +9,23 @@ namespace ISOmeterAPI.Services.Implementations
 {
     public class RoomService : IRoomService
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IUserService _userService;
         private readonly ISOmeterContext _context;
-        public RoomService(ISOmeterContext context)
+        public RoomService(IUserService userService, IHttpContextAccessor httpContextAccessor, ISOmeterContext context)
         {
+            _userService = userService;
+            _httpContextAccessor = httpContextAccessor;
             _context = context;
         }
 
         public bool AddRoom(AddRoomDTO addRoomDTO)
         {
+            // Obtener el UserId desde las claims del JWT
+            var userId = _userService.GetUserIdFromToken();
+
             var existingRoom = _context.Rooms
                 .FirstOrDefault(r => r.Name == addRoomDTO.Name);
-
-            var existingUser = _context.Users
-                .FirstOrDefault(u => u.Id == addRoomDTO.UserId);
 
             if (existingRoom == null)
             {
@@ -29,7 +33,7 @@ namespace ISOmeterAPI.Services.Implementations
                 {
                     Name = addRoomDTO.Name,
                     Description = addRoomDTO.Description,
-                    UserId = addRoomDTO.UserId,
+                    UserId = userId,  // Asignar el UserId obtenido desde las claims
                     Status = true
                 };
 
@@ -42,8 +46,11 @@ namespace ISOmeterAPI.Services.Implementations
 
         public async Task<IEnumerable<Room>> GetAllRooms()
         {
+            var userId = _userService.GetUserIdFromToken();
+
             return await _context.Rooms
                 .Where(x => x.Status == true)
+                .Where(x => x.UserId == userId)
                 .ToListAsync();
         }
     }

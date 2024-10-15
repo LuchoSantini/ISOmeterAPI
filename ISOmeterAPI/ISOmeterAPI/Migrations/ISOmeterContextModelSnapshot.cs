@@ -60,10 +60,10 @@ namespace ISOmeterAPI.Migrations
                     b.Property<int>("DeviceId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<string>("EndDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("InitDate")
+                    b.Property<string>("InitDate")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("RoomId")

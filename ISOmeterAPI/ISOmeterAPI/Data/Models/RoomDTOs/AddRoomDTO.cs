@@ -6,7 +6,5 @@ namespace ISOmeterAPI.Data.Models.RoomDTO
     {
         public string Name { get; set; }
         public string Description { get; set; } = string.Empty;
-        public int UserId { get; set; }
-        public bool Status { get; set; }
     }
 }

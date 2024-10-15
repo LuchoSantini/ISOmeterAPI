@@ -15,7 +15,7 @@ namespace ISOmeterAPI.Data.Entities
         public string Description { get; set; } // Podria ser donde está ubicado el device
         [ForeignKey("RoomId")]
         public int RoomId { get; set; }
-        public Room Room { get; set; }  // Navegación a Room
+        public Room Room { get; set; } 
         public bool Status { get; set; } // Baja lógica
         public ICollection<Essay> Essays { get; set; } = new List<Essay>();
     }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ISOmeterAPI.Migrations
 {
     [DbContext(typeof(ISOmeterContext))]
-    [Migration("20241008015518_UpdatedContext")]
-    partial class UpdatedContext
+    [Migration("20241014120506_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,10 +62,10 @@ namespace ISOmeterAPI.Migrations
                     b.Property<int>("DeviceId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<string>("EndDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("InitDate")
+                    b.Property<string>("InitDate")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("RoomId")

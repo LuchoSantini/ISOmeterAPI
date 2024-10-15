@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ISOmeterAPI.Migrations
 {
-    public partial class UpdatedContext : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -79,8 +79,8 @@ namespace ISOmeterAPI.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    InitDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    InitDate = table.Column<string>(type: "TEXT", nullable: true),
+                    EndDate = table.Column<string>(type: "TEXT", nullable: true),
                     DeviceId = table.Column<int>(type: "INTEGER", nullable: false),
                     RoomId = table.Column<int>(type: "INTEGER", nullable: false)
                 },

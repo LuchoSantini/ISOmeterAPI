@@ -10,7 +10,8 @@ namespace ISOmeterAPI.Services.Interfaces
         public bool ValidateUser(string Name);
         public bool UserLogin(UserLoginDTO userLoginDTO);
         public bool DeleteUser(int id);
-        public GetUsersDTO GetUserByEmail(string email);
+        public User GetUserByEmail(string email);
         public List<GetUsersDTO> GetAllUsers();
+        public int GetUserIdFromToken();
     }
 }

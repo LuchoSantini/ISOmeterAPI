@@ -8,8 +8,8 @@ namespace ISOmeterAPI.Data.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public DateTime InitDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public string? InitDate { get; set; }
+        public string? EndDate { get; set; }
         [ForeignKey("DeviceId")]
         public int DeviceId { get; set; }
         public Device Device { get; set; }
